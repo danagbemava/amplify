@@ -28,7 +28,22 @@ class _MyHomePageState extends State<MyHomePage> {
         gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 20),
         itemBuilder: (BuildContext context, int index) {
-          return const Icon(Icons.ac_unit);
+          return const ClipOval(
+            child: Material(
+              color: Colors.blueAccent,
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: 48,
+                  height: 48,
+                  child: Icon(
+                    Icons.ac_unit,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          );
         },
         itemCount: 100,
       ),
